@@ -1,0 +1,219 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Company - Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #E8EAF6, #FFF3E0);
+        }
+
+        .register-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 380px;
+            text-align: center;
+            border-top: 6px solid #6C63FF; /* Soft purple accent */
+        }
+
+        .register-container h2 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #f9f9f9;
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-wrapper input {
+            padding-right: 40px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .terms input {
+            margin-right: 5px;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            background: #6C63FF;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .register-btn:hover {
+            background: #554DD8;
+        }
+
+        .or-divider {
+            margin: 15px 0;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .social-register {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-register button {
+            padding: 10px;
+            border: none;
+            color: white;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .google-btn {
+            background: #E57373; /* Soft red */
+        }
+
+        .facebook-btn {
+            background: #64B5F6; /* Soft blue */
+        }
+
+        .google-btn:hover {
+            background: #D84343;
+        }
+
+        .facebook-btn:hover {
+            background: #42A5F5;
+        }
+
+        .login-link {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .login-link a {
+            color: #6C63FF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Create an Account</h2>
+        <form>
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group password-wrapper">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Create a password" required>
+                <span class="toggle-password" onclick="togglePassword('password')">👁</span>
+            </div>
+            <div class="input-group password-wrapper">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                <span class="toggle-password" onclick="togglePassword('confirm-password')">👁</span>
+            </div>
+            <div class="terms">
+                <input type="checkbox" required>
+                <label>I agree to the <a href="#">Terms & Conditions</a></label>
+            </div>
+            <a href="loginpage.html" type="submit" class="register-btn" aria-required="true">Register</a>  
+        </form>
+        
+        <div class="or-divider">or sign up with</div>
+        
+        <div class="social-register">
+            <button class="google-btn">🔴 Google</button>
+            <button class="facebook-btn">🔵 Facebook</button>
+        </div>
+
+        <div class="login-link">
+            Already have an account? <a href="loginpage.html">Login here</a>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(id) {
+            const input = document.getElementById(id);
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>

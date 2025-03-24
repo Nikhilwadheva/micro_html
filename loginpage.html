@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Company Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #E8EAF6, #FFF3E0); /* Soft pastel gradient */
+        }
+
+        .login-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 370px;
+            text-align: center;
+            border-top: 6px solid #6C63FF; /* Soft purple accent */
+        }
+
+        .login-container h2 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #f9f9f9;
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-wrapper input {
+            padding-right: 40px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .login-options input {
+            margin-right: 5px;
+        }
+
+        .forgot-password {
+            text-decoration: none;
+            color: #6C63FF;
+            font-weight: 500;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: #6C63FF;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: #554DD8;
+        }
+
+        .or-divider {
+            margin: 15px 0;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-login button {
+            padding: 10px;
+            border: none;
+            color: white;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .google-btn {
+
+            background: #E57373; /* Soft red */
+        }
+
+        .facebook-btn {
+            background: #64B5F6; /* Soft blue */
+        }
+
+        .google-btn:hover {
+            background: #D84343;
+        }
+
+        .facebook-btn:hover {
+            background: #42A5F5;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group password-wrapper">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <span class="toggle-password" onclick="togglePassword()">👁</span>
+            </div>
+            <div class="login-options">
+                <label><input type="checkbox"> Remember Me</label>
+                <a href="forgotpass.html" class="forgot-password" text-decoration="none">Forgot Password?</a>
+            </div>
+            <a href="finalpage.html" type="submit" class="login-btn">Login</a>
+        </form>
+        
+        <div class="or-divider">or continue with</div>
+			
+        <div class="social-login">
+            <a href="https://www.bing.com/ck/a?!&&p=cbbb52ae176185082a99952ee6368716ad79e6b4cf1b14bb35d1563902cbb959JmltdHM9MTc0MjQyODgwMA&ptn=3&ver=2&hsh=4&fclid=0897b476-be8e-6672-0240-a12fbf1567ab&psq=google+account&u=a1aHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tLw&ntb=1" form="round" class="google-btn" >🔴 Google </a>
+            <a href="https://www.facebook.com/login.php/" class="facebook-btn">🔵 Facebook</a>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const password = document.getElementById("password");
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>
